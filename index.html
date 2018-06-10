@@ -6,9 +6,9 @@
   </head>
   <body>
     <header>
-      <a href="index.html" class="logo-img"><img src="img/nerds-logo.svg" width="160" height="65" alt="logo"></a>
+      <a href="index.html" class="logo-img"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип"></a>
       <nav>
-        <h2 class="hidden">Меню</h2>
+        <h2 class="visually-hidden">Меню</h2>
         <ul class="main-menu">
           <li class="main-menu-item"><a href="#">Студия</a></li>
           <li class="main-menu-item"><a href="#">Клиенты</a></li>
@@ -21,9 +21,9 @@
       </nav>
     </header>
     <main>
-      <h1 class="hidden">Nerds</h1>
+      <h1 class="visually-hidden">Nerds</h1>
       <section class="slider">
-        <h2 class="hidden">Слайдер</h2>
+        <h2 class="visually-hidden">Слайдер</h2>
         <ul class="slider-list">
           <li class="slider-item visible">
             <b class="slider-item-title">Долго, дорого, скурпулезно</b>
@@ -43,7 +43,7 @@
         </ul>
       </section>
       <section class="adventages">
-        <h2 class="hidden">Услуги</h2>
+        <h2 class="visually-hidden">Услуги</h2>
         <ul class="adventages-list">
           <li class="adventages-item">
             <h3 class="adventages-item-title">Веб-сайты</h3>
@@ -76,7 +76,7 @@
           </ul>
       </div>
       <div class="slogan">
-        <a href="#"class="slogan-logo"><img src="img/nerds-illustration.png" width="360" height="208" alt="logo"></a>
+        <a href="#"class="slogan-logo"><img src="img/nerds-illustration.png" width="360" height="208" alt="Логотип"></a>
 
         <table class="slogan-table">
           <caption class="slogan-table-caption">
@@ -125,17 +125,17 @@
         <p class="contacts-phrase">тел. +7 (812)275-75-75</p>
         <a href="#" class="contacts-message-button">Напишите нам</a>
       </div>
-      <img class="map" src="img/map.png" width="1440" height="420" alt="map">
+      <img class="map" src="img/map.png" width="1440" height="420" alt="Наш адрес Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8">
       <div class="footer-social">
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="footer-social-button" href="#"><img class="footer-social-button" src="img/vk.svg" width="26" height="15" alt="vk"></a>
+            <a class="footer-social-button" href="#"><img class="footer-social-button" src="img/vk.svg" width="26" height="15" alt="Вконтакте"></a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-social-button" href="#"><img class="footer-social-button" src="img/fb.svg" width="26" height="15" alt="fb"></a>
+            <a class="footer-social-button" href="#"><img class="footer-social-button" src="img/fb.svg" width="26" height="15" alt="Фейсбук"></a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-social-button" href="#"><img class="footer-social-button" src="img/instagram.svg" width="26" height="15" alt="instagram"></a>
+            <a class="footer-social-button" href="#"><img class="footer-social-button" src="img/instagram.svg" width="26" height="15" alt="Инстаграм"></a>
           </li>
         </ul>
       </div>
@@ -144,21 +144,24 @@
         <p class="discount-prase">Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </footer>
-    <section class="message-form">
-      <h2 class="message-form-title">Напишите нам</h2>
-      <p class="message-form-name">
-        <label for="name">Ваше имя:</label><br>
-        <input type="text" name="name" value=" Имя Фамилия">
-      </p>
-      <p class="message-form-mail">
-        <label for="name">Ваш e-mail:</label><br>
-        <input type="text" name="e-mail" value=" e-mail">
-      </p>
-      <p class="message-form-message-text">
-        <label for="letter">Текст письма:</label><br>
-        <textarea name="letter" rows="5">В свободной форме</textarea>
-      </p>
-      <input type="submit" name="transmit" value="Отправить" class="send-message">
+    <section class="modal-form-message">
+      <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="message-form-title">Напишите нам</h2>
+        <p class="message-form-name">
+          <label for="user-name">Ваше имя:</label><br>
+          <input type="text" id="user-name" name="name" placeholder="Имя Фамилия" value="">
+        </p>
+        <p class="message-form-mail">
+          <label for="user-mail">Ваш e-mail:</label><br>
+          <input type="text" id="user-mail" name="e-mail" placeholder="e-mail" value="">
+        </p>
+        <p class="message-form-message-text">
+          <label for="user-message">Текст письма:</label><br>
+          <textarea id="user-message" name="letter" rows="5" placeholder="В свободной форме" value=""></textarea>
+        </p>
+        <input type="submit" name="transmit" value="Отправить" class="send-message">
+        <button type="button" class="modal-close">Закрыть</button>
+      </form>
     </section>
 
   </body>
