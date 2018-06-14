@@ -2,12 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>nerds</title>
+    <title>Нёрдс: каталог</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <a href="index.html" class="logo-img"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип"></a>
-      <nav>
+      <nav class="main-navigation">
         <h2 class="visually-hidden">Меню</h2>
         <ul class="main-menu">
           <li class="main-menu-item"><a href="index.html">Студия</a></li>
@@ -21,27 +24,33 @@
       </nav>
     </header>
     <main>
-      <h1 class="visually-hidden">Магазин готовых шаблонов</h1>
+      <h1 class="catalog-title">Магазин готовых шаблонов</h1>
         <section class="filters">
           <h2 class="visually-hidden">Фильтры</h2>
           <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
               <legend>Стоимость</legend>
-              <label>От<input type="text" name="from" value="0" class="filter-price-range"></label>
-              <label>До<input type="text" name="to" value="15000" class="filter-price-range"></label>
+              <ul class="filters-item">
+                <li><label>От<input type="text" name="from" value="0" class="filter-price-range"></label></li>
+                <li><label>До<input type="text" name="to" value="15000" class="filter-price-range"></label></li>
+              </ul>
             </fieldset>
             <fieldset>
               <legend>Сетка</legend>
-              <label><input type="radio" name="net" value="adaptive" class="filter-net-radio" checked>Адаптивная</label>
-              <label><input type="radio" name="net" value="fix" class="filter-net-radio">Фиксированая</label>
-              <label><input type="radio" name="net" value="Резиновая" class="filter-net-radio">Резиновая</label>
+              <ul class="filters-item">
+                <li><label><input type="radio" name="net" value="adaptive" class="filter-net-radio" checked>Адаптивная</label></li>
+                <li><label><input type="radio" name="net" value="fix" class="filter-net-radio" disabled>Фиксированая</label></li>
+                <li><label><input type="radio" name="net" value="Резиновая" class="filter-net-radio">Резиновая</label></li>
+              </ul>
             </fieldset>
             <fieldset>
               <legend>Особенности</legend>
-              <label><input type="checkbox" name="features" value="slider" class="filter-features-checkbox" checked>Слайдер</label>
-              <label><input type="checkbox" name="features" value="adventages" class="filter-features-checkbox">Блок преимуществ</label>
-              <label><input type="checkbox" name="features" value="news" class="filter-features-checkbox" checked>Новости</label>
-              <label><input type="checkbox" name="features" value="cart" class="filter-features-checkbox">Корзина</label>
+              <ul class="filters-item">
+                <li><label><input type="checkbox" name="features" value="slider" class="filter-features-checkbox" checked>Слайдер</label></li>
+                <li><label><input type="checkbox" name="features" value="adventages" class="filter-features-checkbox">Блок преимуществ</label></li>
+                <li><label><input type="checkbox" name="features" value="news" class="filter-features-checkbox" checked>Новости</label></li>
+                <li><label><input type="checkbox" name="features" value="cart" class="filter-features-checkbox">Корзина</label></li>
+              </ul>
             </fieldset>
             <input type="submit" name="show" value="Показать" class="filter-show">
           </form>
@@ -51,9 +60,10 @@
           <div class="gallery-sort">
             <b class="gallery-sort-bold">Сортировать:</b>
             <ul class="gallery-sort-list">
-              <li class="gallery-sort-list-item">По цене</li>
-              <li class="gallery-sort-list-item">По типу</li>
-              <li class="gallery-sort-list-item">По названию</li>
+              <a href="#"></a>
+              <li class="gallery-sort-list-item"><a href="#">По цене</a></li>
+              <li class="gallery-sort-list-item"><a href="#">По типу</a></li>
+              <li class="gallery-sort-list-item"><a href="#">По названию</a></li>
             </ul>
           </div>
           <div class="gallery-element active">
@@ -61,7 +71,7 @@
             <div class="gallery-element-hower enable">
               <h3 class="gallery-element-hower-title">Sedona</h3>
               <p class="gallery-element-hower-description">Информационный сайт  для туристов</p>
-              <button type="button" class="add-to-cart">9900 руб.</button>
+              <button type="button" class="index-button add-to-cart">9900 руб.</button>
             </div>
           </div>
           <div class="gallery-element">
@@ -69,7 +79,7 @@
             <div class="gallery-element-hower disable">
               <h3  class="gallery-element-hower-title">Pink-App</h3>
               <p class="gallery-element-hower-description">Продуктовый лендинг приложения для iOS и Android</p>
-              <button type="button" class="add-to-cart">9900 руб.</button>
+              <button type="button" class="index-button add-to-cart">9900 руб.</button>
             </div>
           </div>
           <div class="gallery-element">
@@ -77,7 +87,7 @@
             <div class="gallery-element-hower disable">
               <h3 class="gallery-element-hower-title">Borodinsky</h3>
               <p class="gallery-element-hower-description">Сайт салоны красоты. Для мужчин, да.</p>
-              <button type="button" class="add-to-cart">9900 руб.</button>
+              <button type="button" class="index-button add-to-cart">9900 руб.</button>
             </div>
           </div>
           <div class="gallery-element">
@@ -85,35 +95,35 @@
             <div class="gallery-element-hower disable">
               <h3 class="gallery-element-hower-title">Mishka</h3>
               <p class="gallery-element-hower-description">Интернет-магазин  вязаных игрушек</p>
-              <button type="button" class="add-to-cart">9900 руб.</button>
+              <button type="button" class="index-button add-to-cart">9900 руб.</button>
             </div>
           </div>
           <div class="gallery-element">
             <a href="aplus.html" class="gallery-element-link"><img src="img/img-aplus.jpg" width="360" height="576" alt="A Plus"></a>
-            <div class="a-plus-hower diasble">
+            <div class="gallery-element-hower diasble">
               <h3  class="gallery-element-hower-title">A Plus</h3>
               <p class="gallery-element-hower-description">Лендинг курсов повышения квалификации</p>
-              <button type="button" class="add-to-cart">9900 руб.</button>
+              <button type="button" class="index-button add-to-cart">9900 руб.</button>
             </div>
           </div>
           <div class="gallery-element">
             <a href="kvast.html" class="gallery-element-link"><img src="img/img-kvast.jpg" alt="Кваст"></a>
-            <div class="kvast disable">
+            <div class="gallery-element-hower disable">
               <h3 class="gallery-element-hower-title">Кваст</h3>
               <p class="gallery-element-hower-description">Промо-сайт производителя крафтового кваса</p>
-              <button type="button" class="add-to-cart">9900 руб.</button>
+              <button type="button" class="index-button add-to-cart">9900 руб.</button>
             </div>
           </div>
           </div>
           <ul class="pages">
             <li class="pages-item current">
-              <a href="1.html">1</a>
+              <a href="#">1</a>
             </li>
             <li class="pages-item">
-              <a href="2.html">2</a>
+              <a href="#">2</a>
             </li>
             <li class="pages-item">
-              <a href="3.html">3</a>
+              <a href="#">3</a>
             </li>
             <li class="pages-item">
               <a href="#">Следующая</a>
@@ -127,7 +137,7 @@
           <b class="contacts-title">NЁRDS DESIGN STUDIO</b>
           <p class="contacts-phrase">191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8</p>
           <p class="contacts-phrase">тел. +7 (812)275-75-75</p>
-          <a href="#" class="contacts-message-button">Напишите нам</a>
+          <a href="#" class="index-button">Напишите нам</a>
         </div>
         <img class="map" src="img/map.png" width="1440" height="420" alt="Наш адрес Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8">
         <div class="footer-social">
@@ -145,26 +155,27 @@
         </div>
         <div class="discont">
           <b class="discount-title">Давайте дружить, это выгодно!</b>
-          <p class="discount-prase">Скидка 10% для друзей из социальных сетей.</p>
+          <p class="discount-phrase">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </footer>
       <section class="modal-form-message">
         <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
           <h2 class="message-form-title">Напишите нам</h2>
-          <p class="message-form-name">
+          <p class="message-form-label">
             <label for="user-name">Ваше имя:</label><br>
             <input type="text" id="user-name" name="name" placeholder="Имя Фамилия" value="">
           </p>
-          <p class="message-form-mail">
+          <p class="message-form-label">
             <label for="user-mail">Ваш e-mail:</label><br>
             <input type="text" id="user-mail" name="e-mail" placeholder="e-mail" value="">
           </p>
-          <p class="message-form-message-text">
+          <p class="message-form-label">
             <label for="user-message">Текст письма:</label><br>
             <textarea id="user-message" name="letter" rows="5" placeholder="В свободной форме" value=""></textarea>
           </p>
-          <input type="submit" name="transmit" value="Отправить" class="send-message">
+          <input type="submit" name="transmit" value="Отправить" class="index-button">
           <button type="button" class="modal-close">Закрыть</button>
+          <br><br>
         </form>
       </section>
   </body>
