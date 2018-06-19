@@ -10,8 +10,22 @@ body {
 
   background-color: #ffffff;
 }
-.visually-hidden {
-  display: none;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 header {
@@ -378,13 +392,40 @@ a {
   color: #000000;
   text-transform: uppercase;
 }
-.filters-item {
+.filters-list {
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   list-style: none;
-  color: #b8b8b8;
+  color: #283136;
 }
+
+.filters-item label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-features-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid #b8b8b8;
+}
+
+
+
+
+
+
+
 .filter-show {
   line-height: 18px;
   font-weight: 700;
@@ -409,7 +450,7 @@ a {
 
   padding: 16px 40px;
   background-color: #fb565a;
-  
+
 }
 .index-button.add-to-cart:hover {
   background-color:#e74246;
