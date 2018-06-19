@@ -54,7 +54,16 @@ a {
   text-decoration: none;
 }
 
-
+.main-menu {
+  padding: 0px;
+  padding-top: 10px;
+  margin-right: 80px;
+}
+.cart {
+  padding: 0px;
+  padding-top: 10px;
+  margin-right: -6px;
+}
 .main-menu,
 .cart {
   list-style: none;
@@ -106,7 +115,8 @@ a {
 
   background:  url(../img/slide1.png) no-repeat;
   background-size: auto;
-  background-position: right;
+  background-position: 432px 8px;
+  padding-top: 68px;
 }
 .slider-item:nth-child(2) {
 
@@ -209,19 +219,6 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .main-menu-item.active, .cart.active {
   outline: none;
 	box-shadow: 0 5px 0px -1px #eeeeee,
@@ -249,12 +246,17 @@ a {
 }
 
 .adventages-item-title {
+  margin-bottom: 0px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   color: #000000;
+  text-transform: uppercase;
 }
 
+p.adventages-item-phrase {
+    margin-bottom: 47px;
+}
 
 
 .studio-about-title {
@@ -262,11 +264,13 @@ a {
   line-height: 45px;
   font-weight: 500;
   color: #000000;
+
 }
 
 .work-types-title, .slogan-title {
   font-weight: 700;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .slogan-table-bold {
@@ -399,7 +403,10 @@ a {
   list-style: none;
   color: #283136;
 }
+.filters-item {
+  margin: 20px;
 
+}
 .filters-item label {
   position: relative;
 
@@ -407,6 +414,7 @@ a {
 
   cursor: pointer;
   user-select: none;
+
 }
 
 .filter-features-checkbox + label::before {
@@ -420,7 +428,16 @@ a {
   border: 2px solid #b8b8b8;
 }
 
-
+.filter-net-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 18px;
+  height: 18px;
+  border: 4px solid #b9b9b9;
+  border-radius: 50%;
+}
 
 
 
@@ -568,13 +585,13 @@ header {
 
 .logo-img {
   width: 160px;
-  padding-right: 160px;
 }
 .main-navigation {
   width: 1160px;
   background-color: inherit;
   display: flex;
   justify-content: space-between;
+
 }
 .main-navigation-wrapper {
   width: 1160px;
@@ -613,7 +630,6 @@ main {
 }
 .slider-wrapper {
   width: 1160px;
-  padding: 50px 0 0;
   margin: 0 auto;
   display: flex;
 }
@@ -626,20 +642,27 @@ main {
 
 }
 
+p.slider-item-phrase {
+    margin: 26px 0 53px;
+
+}
 /*следующий пункт преииущества*/
 
 .adventages {
   width: 1160px;
-  padding: 50px 20px 0;
+
 
 }
 .adventages-list {
-  padding: 0;
-  width:auto;
+  margin: 0px;
+  padding: 0px;
+  width: auto;
   min-height: 350px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-top: 3px;
+  padding-right: 60px;
 }
 
 .adventages-item {
@@ -649,19 +672,28 @@ main {
 }
 
 .about-wrapper {
-  min-height: 530px;
   width: 1160px;
-  padding: 50px 20px 0;
+  margin: 153px 0px 115px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-
 .studio-about {
   width: 660px;
 }
+.studio-about-phrase {
+    margin: 34px 0px 39px 0px;
+}
+.work-types-list {
+    padding-left: 37px;
+    margin: 12px 0px;
+}
+.work-types-element {
+    padding: 11px 0px;
+}
 .slogan {
-  width:360px;
+  margin-top: -30px;
+  width: 360px;
 }
 .works-list {
   list-style: none;
@@ -669,13 +701,18 @@ main {
   padding: 50px 20px 0;
 
 }
-.works-list, .footer-social-list{
+.works-list, .footer-social-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-
+.works-list-item {
+  margin-left: 32px;
+  margin-right: 74px;
+}
 footer {
   width: 100%;
   background-color: #eeeeee;
