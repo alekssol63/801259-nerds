@@ -394,7 +394,7 @@ a {
   background-color:#eeeeee;
   border:none;
   padding: 16px 90px;
-  outline: none;
+
 }
 .filter-show:hover {
   background-color:#dfdfdf;
@@ -409,7 +409,7 @@ a {
 
   padding: 16px 40px;
   background-color: #fb565a;
-  outline: none;
+  
 }
 .index-button.add-to-cart:hover {
   background-color:#e74246;
