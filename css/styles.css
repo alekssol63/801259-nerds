@@ -1226,34 +1226,80 @@ footer {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
-//  margin-left: 40px;
+  margin-right: 266px;
 }
 .gallery-sort {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 95px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 95px;
 }
 
 
-.gallery-sort-list {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    margin-left: 265px;
+.gallery-sort-list, .gallery-sort-order {
+  margin: 0px;
+  margin-right: 27px;
+  padding: 0px;
+  list-style: none;
+}
+.gallery-sort-order {
+  margin: 0;
 }
 .gallery-sort-list-item {
-    display: inline;
-    padding-right: 22px;
+  display: inline;
+  padding-right: 22px;
 }
-.gallery-sort-list-item a {
-  list-style:none;
+.gallery-sort-order-item {
+  display: inline;
+  padding-right: 5px;
+}
+.gallery-sort-order-item:last-child {
+  padding-right: 0px;
+}
+.gallery-sort-list-item a, .gallery-sort-order-item a {
+
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
   color: #b2b2b2;
 }
+.sort-ascending, .sort-descending {
+  position: relative;
+  width: 15px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.sort-ascending:before {
+  position: absolute;
+  bottom: 5px;
+  right: 1px;
+  content: "";
+  border: 6px solid transparent;
+  border-bottom: 11px solid #ededed;
 
+}
+.sort-descending:before {
+  position: absolute;
+  top: 5px;
+  left: -2px;
+  content: "";
+  border: 6px solid transparent;
+  border-top: 11px solid #ededed;
+}
+.sort-ascending:hover:before {
+  border-bottom: 11px solid #a6a6a6;
+}
+.sort-descending:hover:before {
+ border-top: 11px solid #a6a6a6;
+}
+
+.sort-ascending:active:before {
+  border-bottom: 11px solid #231f20;
+}
+.sort-descending:active:before {
+  border-top: 11px solid #231f20;
+}
 .gallery-element-hover {
   width: 360px;
   /* height: 230px; */
