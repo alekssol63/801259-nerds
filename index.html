@@ -131,16 +131,16 @@
 
 
         <ul class="works-list">
-          <li class="works-list-item"><!--199--><!--height="68"-->
+          <li class="works-list-item">
             <a class="works-list-logo" href="#" ><img src="img/logo-1.png" width="199" height="68" alt="html-academy"></a>
           </li>
-          <li class="works-list-item"><!--209--><!--height="87"-->
+          <li class="works-list-item">
             <a class="works-list-logo" href="#"><img src="img/logo-2.png" width="209" height="87" alt="boorodinsky"></a>
           </li>
-          <li class="works-list-item"><!--185--><!--height="52"-->
+          <li class="works-list-item">
             <a class="works-list-logo" href="#"><img src="img/logo-3.png" width="185" height="52" alt="pink"></a>
           </li>
-          <li class="works-list-item"><!--173--><!--height="84"-->
+          <li class="works-list-item">
             <a class="works-list-logo" href="#"><img src="img/logo-4.png" width="173" height="84" alt="mishka"></a>
           </li>
         </ul>
@@ -153,10 +153,13 @@
             <b class="contacts-title">NЁRDS DESIGN STUDIO</b>
             <p class="contacts-phrase">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
             <p class="contacts-phrase phone">тел. +7 (812) 275-75-75</p>
-            <a href="#" class="index-button red-link">Напишите нам</a>
+            <a href="#" class="index-button red-link write-us">Напишите нам</a>
           </div>
 
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+          width="1440" height="420" allowfullscreen>
+        </iframe>
         <img class="map" src="img/map.png" width="1440" height="420" alt="Наш адрес Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
       </div>
 
@@ -208,14 +211,14 @@
 
     </footer>
     <section class="modal-form-message">
-      <form class="message-form active" action="https://echo.htmlacademy.ru" method="post">
+      <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
 
           <button type="button" class="modal-close">Закрыть</button>
           <h2 class="message-form-title">Напишите нам</h2>
           <div class="message-form-wrapper">
           <p class="message-form-label">
             <label for="user-name">Ваше имя:</label>
-            <input type="text" id="user-name" name="name" placeholder="Имя Фамилия" value="" class="message-form-input">
+            <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия" value="" class="message-form-input">
           </p>
           <p class="message-form-label">
             <label for="user-mail">Ваш e-mail:</label>
@@ -229,6 +232,91 @@
           <input type="submit" name="transmit" value="Отправить" class="index-button red-link">
       </form>
     </section>
+    <script>
+      var writeButton = document.querySelector(".write-us");
+
+      var messageForm = document.querySelector(".message-form");
+
+      var close = messageForm.querySelector(".modal-close");
+
+      var userName = messageForm.querySelector("[name=user-name]");
+      var eMail = messageForm.querySelector("[name=e-mail]");
+      var letter = messageForm.querySelector("[name=letter]");
+      var isStorageSupport = true;
+
+      var storageUserName = "";
+      var storageEmail  = "";
+      var storageLetter = "";
+      var interactiveMap =  document.querySelector("iframe");
+
+      interactiveMap.addEventListener('mouseover',()=>{
+        interactiveMap.classList.add('active')});
+      interactiveMap.addEventListener('mouseout',()=>{
+        interactiveMap.classList.remove('active')})
+
+      function saveData() {
+        if (isStorageSupport) {
+          localStorage.setItem("userName", userName.value);
+          localStorage.setItem("eMail", eMail.value);
+          localStorage.setItem("letter", letter.value);
+        }
+      }
+      try {
+        storageUserName = localStorage.getItem("userName");
+        storageEmail = localStorage.getItem("eMail");
+        storageLetter = localStorage.getItem("letter");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      writeButton.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        messageForm.classList.add("active");
+        if (storageUserName) {
+          userName.value = storageUserName;
+          if (storageEmail) {
+            eMail.value = storageEmail;
+            if (storageLetter) {
+              letter.value = storageLetter;
+            } else {
+                letter.focus();
+            }
+          } else {
+              eMail.focus();
+          }
+        } else {
+          userName.focus();
+        }
+      });
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        messageForm.classList.remove("active");
+        messageForm.classList.remove("modal-error");
+        saveData();
+      });
+      messageForm.addEventListener("submit", function (evt) {
+        console.log('here');
+        if (!userName.value || !eMail.value || !letter.value) {
+          evt.preventDefault();
+          messageForm.classList.remove("modal-error");
+          messageForm.offsetWidth = messageForm.offsetWidth;
+          messageForm.classList.add("modal-error");
+        } else {
+            saveData();
+        }
+      });
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (messageForm.classList.contains("active")) {
+            messageForm.classList.remove("active");
+            messageForm.classList.remove("modal-error");
+          }
+          saveData();
+        }
+       });
+
+    </script>
 
   </body>
 </html>

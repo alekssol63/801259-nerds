@@ -546,7 +546,7 @@ main {
 }
 
 .works-list {
-
+    margin: 0;
     //margin-bottom: 78px;
     height: 182px;
     border-top: 2px solid #f4f4f4;
@@ -555,14 +555,18 @@ main {
 }
 
 .works-list-item {
-    /* margin-left: 34px; */
+  /*
+    margin: 0;
+
     margin-right: 30px;
-    /* margin-top: 63px; */
+
     position: relative;
-    /* text-align: center; */
-    /* vertical-align: middle; */
-    /* display: block; */
+
     padding-top: 56px;
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .works-list-item:nth-child(-n+3):after {
     content: "";
@@ -587,6 +591,25 @@ main {
 }
 
 /*------------------------------map--------------------------------------------*/
+.map {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+
+iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
+  opacity: 0;
+}
+iframe.active{
+  opacity: 1;
+}
 
 .map-wrapper {
     position: relative;
@@ -595,7 +618,9 @@ main {
 }
 
 .contacts {
+
     position: absolute;
+    z-index: 3;
     top: 54px;
     left: 141px;
     background-color: #ffffff;
@@ -728,10 +753,52 @@ footer {
 
 
 /*----------------------------modaL form-------------------------------------*/
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .message-form {
   visibility: hidden;
 }
 .message-form.active {
+  z-index: 5;
+  animation: bounce 0.6s;
   visibility: visible;
   padding: 66px 100px 85px;
   /* height: 590px; */
@@ -741,6 +808,10 @@ footer {
   position: fixed;
   background-color: #ffffff;
   box-shadow: 0px 30px 95px -15px #000000;
+
+}
+.message-form.modal-error {
+  animation: shake 0.6s;
 }
 
 .message-form-title {
@@ -798,6 +869,7 @@ footer {
 }
 .message-form-input:focus {
   border-color: #000000;
+  color: #444444;
 }
 .message-form-input:focus::-webkit-input-placeholder {
   color: #000000;
@@ -818,6 +890,7 @@ footer {
 }
 .message-form-textarea:focus {
   border-color: #000000;
+  color: #444444;
 }
 .message-form-textarea:focus::-webkit-input-placeholder {
   color: #000000;
@@ -879,6 +952,7 @@ footer {
 .message-form .index-button {
   padding: 16px 85px;
 }
+
 
 
 /*-------------------------------catalog.html---------------------------------*/
