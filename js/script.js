@@ -13,12 +13,13 @@ var storageUserName = "";
 var storageEmail  = "";
 var storageLetter = "";
 var interactiveMap =  document.querySelector("iframe");
-
+interactiveMap.classList.add('active');
+/*
 interactiveMap.addEventListener('mouseover',()=>{
   interactiveMap.classList.add('active')});
 interactiveMap.addEventListener('mouseout',()=>{
   interactiveMap.classList.remove('active')})
-
+*/
 function saveData() {
   if (isStorageSupport) {
     localStorage.setItem("userName", userName.value);
