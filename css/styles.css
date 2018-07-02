@@ -63,7 +63,7 @@ img {
   width: 100%;
   padding-top: 50px;
   background-color: #eeeeee;
-  margin-bottom: 82px;
+  margin-bottom: 80px;
 }
 
 .header-wrapper {
@@ -348,7 +348,7 @@ main {
 
 /*-----------------------------adventages------------------------------------*/
 .adventages {
-  margin-bottom: 37px;
+  margin-bottom: 38px;
   padding-bottom: 80px;
   border-bottom: 2px solid #f4f4f4;
 }
@@ -397,7 +397,7 @@ main {
 
 .adventages-item-phrase {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   margin-right: 50px;
 }
 
@@ -456,7 +456,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
 
-  margin-bottom: 40px;
+  margin-bottom: 41px;
   /*padding-bottom: 48px;
   border-bottom: 1px solid #f4f4f4;*/
 }
@@ -491,7 +491,7 @@ main {
 }
 .work-types-title {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 }
 
 .work-types-list {
@@ -677,7 +677,7 @@ iframe.active{
 .contacts-phrase {
   margin: 0;
   margin-bottom: 18px;
-
+  margin-left: 2px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -685,7 +685,7 @@ iframe.active{
   color: #666666;
 }
 .contacts-phrase.phone {
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 }
 /*------------------------------footer---------------------------------------*/
 footer {
@@ -698,7 +698,7 @@ footer {
 
   margin: 0 auto;
   width: 1160px;
-  padding: 58px 20px 0;
+  padding: 57px 20px 0;
 }
 
 .footer-social-list {
@@ -769,7 +769,7 @@ footer {
 }
 
 /*----------------------------modaL form-------------------------------------*/
-@keyframes bounce {
+/*@keyframes bounce {
   0% {
     transform: translateY(-2000px);
   }
@@ -786,6 +786,42 @@ footer {
     transform: translateY(0);
   }
 }
+*/
+
+@keyframes bounce {
+0% {
+transform: translate(-50%, -2000px);
+}
+
+70% {
+transform: translate(-50%, 30px);
+}
+
+90% {
+transform: translate(-50%, -10px);
+}
+
+100% {
+transform: translate(-50%, 0);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes shake {
   0%,
@@ -1472,7 +1508,7 @@ footer {
 
   padding: 0;
   margin: 0;
-  margin-bottom: 62px;
+  margin-bottom: 60px;
   width: 760px;
 
   list-style: none;
@@ -1529,15 +1565,15 @@ footer {
   justify-content: center;
   align-items: center;
 
-  margin-right: 16px;
-  min-width: 45px;
-  height: 45px;
+  margin-right: 11px;
+  min-width: 50px;
+  height: 50px;
 
   background-color: #eeeeee;
 }
 
 .pages-item:last-child {
-  padding: 0 80px;
+  padding: 0 78px;
 }
 
 .pages-item:hover {
@@ -1549,9 +1585,9 @@ footer {
   box-shadow: inset 0 7px 0 0 #bfbfbf;
 }
 .pages-item.active {
-  min-width: 42px;
-  height: 42px;
-  border:3px solid #dbdbdb;
+  min-width: 44px;
+  height: 44px;
+  border: 3px solid #dbdbdb;
 }
 
 .pages-item a {
