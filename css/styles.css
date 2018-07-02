@@ -811,13 +811,17 @@ footer {
 
 .message-form {
   display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .message-form.active {
   position: fixed;
   /* height: 590px;
   width: 958px; */
-  bottom: 95px;
-  left: 12%;
+/*  bottom: 95px;
+  left: 12%;*/
+
   z-index: 5;
 
   display: block;
