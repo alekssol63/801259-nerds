@@ -8,71 +8,57 @@
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header-index">
       <div class="header-wrapper">
-
         <nav class="main-navigation">
           <h2 class="visually-hidden">Меню</h2>
+          <a class="logo-img"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип"></a>
           <div class="main-navigation-wrapper">
-            <a href="index.html" class="logo-img"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип"></a>
             <ul class="main-menu">
-              <li class="main-menu-item active"><a href="#">Студия</a></li>
-              <li class="main-menu-item"><a href="#">Клиенты</a></li>
-              <li class="main-menu-item"><a href="catalog.html">Магазин</a></li>
-              <li class="main-menu-item"><a href="#">Контакты</a></li>
+              <li class="main-menu-item"><a class="menu-item-link active">Студия</a></li>
+              <li class="main-menu-item"><a href="#" class="menu-item-link">Клиенты</a></li>
+              <li class="main-menu-item"><a href="catalog.html" class="menu-item-link">Магазин</a></li>
+              <li class="main-menu-item"><a href="#" class="menu-item-link">Контакты</a></li>
             </ul>
             <ul class="cart">
-              <li class="cart-item"><a href="#">Корзина</a></li>
+              <li class="cart-item"><a href="#" class="cart-item-link">Корзина</a></li>
             </ul>
           </div>
-
-
         </nav>
-        <section class="slider">
-          <div class="slider-wrapper">
-            <h2 class="visually-hidden">Слайдер</h2>
-
-            <ul class="slider-list">
-              <li class="slider-item visible">
-                <div class="slider-item-content">
-                  <b class="slider-item-title">Долго, дорого, скрупулезно</b>
-                  <p class="slider-item-phrase">Математически выверенный дизайн  для вашего сайта или мобильного приложения</p>
-                  <a href="#" class="index-button">Узнать больше</a>
-                </div>
-
-              </li>
-              <li class="slider-item invisible">
-                <div class="slider-item-content">
-                  <b class="slider-item-title">Любим математику как никто другой</strong></b>
-                  <p class="slider-item-phrase">Никакого креатива, только математические формулы  для расчета идеальных пропорций</p>
-                  <a href="#" class="index-button">Узнать больше</a>
-                </div>
-
-              </li>
-              <li class="slider-item invisible">
-                <div class="slider-item-content">
-                  <b class="slider-item-title">Только ночь, только хардкор</b>
-                  <p class="slider-item-phrase">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается</p>
-                  <a href="#" class="index-button">Узнать больше</a>
-                </div>
-
-              </li>
-            </ul>
-            <fieldset>
-              <legend>Выбор слайда</legend>
-              <label><input type="radio" name="slider-radio" value="first-slide" class="slide-select" checked>Первый слайд</label>
-              <label><input type="radio" name="slider-radio" value="second-slide" class="slide-select">Второй слайд</label>
-              <label><input type="radio" name="slider-radio" value="third-slide" class="slide-select">Третий слайд</label>
-            </fieldset>
-          </div>
-
-        </section>
       </div>
-
+      <section class="slider">
+        <div class="slider-wrapper">
+          <h2 class="visually-hidden">Преимущества</h2>
+          <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+          <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+          <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+          <div class="slider-controls">
+            <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
+            <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
+            <label class="slider-controls-item slider-controls-item--3" for="product-3">Третий</label>
+          </div>
+          <ul class="slider-list">
+            <li class="slider-item">
+              <h3 class="slider-item-title">Долго, дорого,<br> скрупулезно.</h3>
+              <p class="slider-item-phrase">Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+              <a class="slider-item-button button" href="#">Узнать больше</a>
+            </li>
+            <li class="slider-item">
+              <h3 class="slider-item-title">Любим математику как никто другой</h3>
+              <p class="slider-item-phrase">Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+              <a class="slider-item-button button" href="#">Узнать больше</a>
+            </li>
+            <li class="slider-item">
+              <h3 class="slider-item-title">Только ночь,<br> только хардкор</h3>
+              <p class="slider-item-phrase">Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
+              <a class="slider-item-button button" href="#">Узнать больше</a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </header>
     <main>
       <h1 class="visually-hidden">Nerds</h1>
-
       <section class="adventages">
         <h2 class="visually-hidden">Услуги</h2>
         <ul class="adventages-list">
@@ -100,7 +86,7 @@
             Исповедуем принципы минимализма и чистоты. Ставим математический расчет
             превыше креатива. Работаем не покладая рук, как роботы.
           </p>
-          <b class="work-types-title">Выполняем заказы на разработку:</strong></b>
+          <b class="work-types-title">Выполняем заказы на разработку:</b>
             <ul class="work-types-list">
               <li class="work-types-element">Веб-сайтов любой сложности</li>
               <li class="work-types-element">Мобильных приложений для OS и Android</li>
@@ -108,106 +94,136 @@
             </ul>
         </div>
         <div class="slogan">
-          <a href="#"class="slogan-logo"><img src="img/nerds-illustration.png" width="360" height="208" alt="Логотип"></a>
-
+          <div class="slogan-logo">
+            <img src="img/nerds-illustration.png" width="360" height="208" alt="Логотип">
+          </div>
           <table class="slogan-table">
             <caption class="slogan-table-caption">
                 <b class="slogan-title">с 2004 года Любим точность во всем:</b>
             </caption>
             <tr class="slogan-table-row">
-              <td class="slogan-table-cell">
-                <span class="slogan-table-bold">146%</span>
+              <td class="slogan-table-cell slogan-table-bold">
+                146<sup><small>%</small></sup>
               </td>
-              <td class="slogan-table-cell">Уровень самоотдачи</td>
+              <td class="slogan-table-cell slogan-table-bold">
+                100<sup><small>%</small></sup>
+              </td>
+              <td class="slogan-table-cell slogan-table-bold">
+                50<sup><small>%</small></sup>
+              </td>
             </tr>
             <tr class="slogan-table-row">
               <td class="slogan-table-cell">
-                <span class="slogan-table-bold">100%</span>
+                Уровень самоотдачи
               </td>
-              <td class="slogan-table-cell">Соблюдение сроков</td>
-            </tr>
-            <tr class="slogan-table-row">
               <td class="slogan-table-cell">
-                <span class="slogan-table-bold">50%</span>
+                Соблюдение сроков
               </td>
-              <td class="slogan-table-cell">Минимальная предоплата</td>
+              <td class="slogan-table-cell">
+                Минимальная предоплата
+              </td>
             </tr>
           </table>
         </div>
-
-
-
-
-
-
       </div>
-
-
-        <ul class="works-list">
-          <li class="works-list-item">
-            <a class="works-list-logo" href="#" ><img src="img/logo-1.png" width="199" height="68" alt="html-academy"></a>
-          </li>
-          <li class="works-list-item">
-            <a class="works-list-logo" href="#"><img src="img/logo-2.png" width="209" height="87" alt="boorodinsky"></a>
-          </li>
-          <li class="works-list-item">
-            <a class="works-list-logo" href="#"><img src="img/logo-3.png" width="185" height="52" alt="pink"></a>
-          </li>
-          <li class="works-list-item">
-            <a class="works-list-logo" href="#"><img src="img/logo-4.png" width="173" height="84" alt="mishka"></a>
-          </li>
-        </ul>
+      <ul class="works-list">
+        <li class="works-list-item">
+          <a class="works-list-logo" href="https://htmlacademy.ru/intensive/htmlcss" ><img src="img/logo-1.png" width="200" height="90" alt="html-academy"></a>
+        </li>
+        <li class="works-list-item">
+          <a class="works-list-logo" href="#"><img src="img/logo-2.png" width="210" height="90" alt="boorodinsky"></a>
+        </li>
+        <li class="works-list-item">
+          <a class="works-list-logo" href="#"><img src="img/logo-3.png" width="185" height="90" alt="pink"></a>
+        </li>
+        <li class="works-list-item">
+          <a class="works-list-logo" href="#"><img src="img/logo-4.png" width="175" height="90" alt="mishka"></a>
+        </li>
+      </ul>
     </main>
     <footer>
-      <h2 class="hidden">Контакты</h2>
-      <div class="contacts">
-        <b class="contacts-title">NЁRDS DESIGN STUDIO</b>
-        <p class="contacts-phrase">191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8</p>
-        <p class="contacts-phrase">тел. +7 (812)275-75-75</p>
-        <a href="#" class="index-button">Напишите нам</a>
+      <div class="map-wrapper">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts">
+          <div class="contacts-wrapper">
+            <b class="contacts-title">NЁRDS DESIGN STUDIO</b>
+            <p class="contacts-phrase">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+            <p class="contacts-phrase phone">тел. +7 (812) 275-75-75</p>
+            <a href="#" class="index-button red-link write-us">Напишите нам</a>
+          </div>
+        </div>
+        <!--    <img class="map" src="img/map.png" width="1440" height="420" alt="Наш адрес Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">-->
       </div>
-      <img class="map" src="img/map.png" width="1440" height="420" alt="Наш адрес Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8">
+      <div class="iframe-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="1440" height="420" allowfullscreen></iframe>
+      </div>
       <div class="footer-bottom-wrapper">
         <div class="footer-social">
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="footer-social-button" href="#"><img class="footer-social-button" src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте"></a>
+              <a class="footer-social-button" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+                <svg x="0px" y="0px" width="26px" height="15px" viewBox="0 0 26 15" enable-background="new 0 0 26 15" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M16.138,11.51c0.956-0.309,2.18,2.04,3.483,2.939c0.978,0.681,1.727,0.534,1.727,0.534l3.473-0.05
+                    c0,0,1.815-0.112,0.957-1.554c-0.071-0.12-0.503-1.069-2.585-3.022c-2.177-2.043-1.882-1.712,0.739-5.244
+                  	c1.597-2.153,2.236-3.468,2.036-4.028c-0.192-0.539-1.365-0.399-1.365-0.399L20.69,0.713c-0.381,0.001-0.704,0.119-0.851,0.515
+                  	c-0.003,0.004-0.621,1.666-1.445,3.079c-1.741,2.989-2.436,3.148-2.724,2.961c-0.661-0.433-0.494-1.737-0.494-2.664
+                  	c0-2.897,0.432-4.105-0.846-4.417c-0.427-0.104-0.739-0.172-1.828-0.182c-1.392-0.021-2.574,0-3.244,0.329
+                  	c-0.445,0.223-0.786,0.712-0.579,0.74c0.26,0.035,0.843,0.16,1.155,0.586c0.401,0.552,0.389,1.789,0.389,1.789
+                  	s0.229,3.411-0.54,3.834c-0.528,0.29-1.25-0.302-2.803-3.016C6.087,2.879,5.488,1.345,5.488,1.345S5.372,1.06,5.162,0.904
+                  	C4.912,0.719,4.562,0.66,4.562,0.66L0.848,0.684c0,0-0.558,0.016-0.763,0.262C-0.097,1.164,0.07,1.614,0.07,1.614
+                  	s2.909,6.881,6.203,10.347c3.02,3.182,6.452,2.971,6.452,2.971h1.555c0,0,0.469-0.054,0.709-0.312
+                  	c0.224-0.24,0.214-0.691,0.214-0.691S15.172,11.82,16.138,11.51z"/>
+                </svg>
+              </a>
             </li>
             <li class="footer-social-item">
-              <a class="footer-social-button" href="#"><img class="footer-social-button" src="img/fb-icon.svg" width="26" height="15" alt="Фейсбук"></a>
+              <a class="footer-social-button" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg x="0px" y="0px" width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve">
+                  <path fill="#ffffff" d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z"/>
+                </svg>
+              </a>
             </li>
             <li class="footer-social-item">
-              <a class="footer-social-button" href="#"><img class="footer-social-button" src="img/insta-icon.svg" width="26" height="15" alt="Инстаграм"></a>
+              <a class="footer-social-button" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+                  <svg x="0px" y="0px" width="22px" height="22px" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve">
+                    <path d="m18 0h-15c-1.65 0-3 1.35-3 3v15c0 1.65 1.35 3 3 3h15c1.65 0 3-1.35 3-3v-15c0-1.65-1.35-3-3-3zm-7.5 7c1.93 0 3.5 1.57
+                       3.5 3.5s-1.57 3.5-3.5 3.5-3.5-1.57-3.5-3.5 1.57-3.5 3.5-3.5zm7.5 11h-15v-9h1.181c-.114.482-.181.983-.181 1.5 0 3.59 2.91 6.5 6.5 6.5s6.5-2.91
+                       6.5-6.5c0-.517-.066-1.018-.181-1.5h1.181zm0-11h-4v-4h4z" fill="#fff"/>
+                  </svg>
+              </a>
             </li>
           </ul>
         </div>
-        <div class="discont">
+        <div class="discount">
           <b class="discount-title">Давайте дружить, это выгодно!</b>
           <p class="discount-phrase">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
-
     </footer>
     <section class="modal-form-message">
       <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
-        <h2 class="message-form-title">Напишите нам</h2>
-        <p class="message-form-label">
-          <label for="user-name">Ваше имя:</label><br>
-          <input type="text" id="user-name" name="name" placeholder="Имя Фамилия" value="">
-        </p>
-        <p class="message-form-label">
-          <label for="user-mail">Ваш e-mail:</label><br>
-          <input type="text" id="user-mail" name="e-mail" placeholder="e-mail" value="">
-        </p>
-        <p class="message-form-label">
-          <label for="user-message">Текст письма:</label><br>
-          <textarea id="user-message" name="letter" rows="5" placeholder="В свободной форме" value=""></textarea>
-        </p>
-        <input type="submit" name="transmit" value="Отправить" class="index-button">
-        <button type="button" class="modal-close">Закрыть</button>
-        <br><br>
+          <button type="button" class="modal-close">Закрыть</button>
+          <h2 class="message-form-title">Напишите нам</h2>
+          <div class="message-form-wrapper">
+          <p class="message-form-label">
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия" value="" class="message-form-input">
+          </p>
+          <p class="message-form-label">
+            <label for="user-mail">Ваш e-mail:</label>
+            <input type="text" id="user-mail" name="e-mail" placeholder="e-mail@example.com" value="" class="message-form-input">
+          </p>
+          <p class="message-form-label">
+            <label for="user-message">Текст письма:</label>
+            <textarea id="user-message" name="letter" rows="5" placeholder="В свободной форме" class="message-form-textarea"></textarea>
+          </p>
+          </div>
+          <input type="submit" name="transmit" value="Отправить" class="index-button red-link">
       </form>
     </section>
-
+    <script src="./js/script.js"></script>
   </body>
 </html>
