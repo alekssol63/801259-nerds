@@ -53,24 +53,26 @@
               <legend >Сетка</legend>
               <ul class="filters-list">
                 <li class="filters-item">
-                  <label>
+                  <input type="radio"  class="visually-hidden filter-net-radio" name="net" value="adaptive" id="net-adaptive" checked>
+                  <label class="label-radio" for="net-adaptive">
                     Адаптивная
-                    <input type="radio" name="net" value="adaptive" class="visually-hidden filter-net-radio" id="net-adaptive" checked>
                     <span class="radio-indicator"></span>
                   </label>
                 </li>
                 <li class="filters-item">
-                  <label>
-                    Фиксированная
-                    <input type="radio" name="net" value="fix" class="visually-hidden filter-net-radio" id="net-fix">
-                    <span class="radio-indicator"></span>
-                  </label>
+
+                    <input type="radio" class="visually-hidden filter-net-radio" name="net" value="fix"  id="net-fix">
+                    <label class="label-radio" for="net-fix">
+                      Фиксированная
+                      <span class="radio-indicator"></span>
+                    </label>
                 </li>
                 <li class="filters-item">
-                  <label>
-                    Резиновая
-                    <input type="radio" name="net" value="stretch" id="net-stretch" class="visually-hidden filter-net-radio">
-                    <span class="radio-indicator"></span>
+
+                    <input type="radio" class="visually-hidden filter-net-radio" name="net" value="stretch" id="net-stretch">
+                    <label class="label-radio" for="net-stretch">
+                      Резиновая
+                      <span class="radio-indicator"></span>
                   </label>
                 </li>
               </ul>
@@ -79,39 +81,28 @@
               <legend>Особенности</legend>
               <ul class="filters-list">
                 <li class="filters-item">
-                  <label>
-                    Слайдер
-                    <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-slider" id="checkbox-slider" checked disabled>
-                    <span class="checkbox-indicator"></span>
-                  </label>
+                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-slider" id="checkbox-slider" checked>
+                  <label class="label-checklist" for="checkbox-slider">Слайдер<span class="checkbox-indicator"></span></label>
                 </li>
                 <li class="filters-item">
-                  <label>
-                    Блок преимуществ
-                    <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-adventages" id="checkbox-adventages">
-                    <span class="checkbox-indicator"></span>
-                  </label>
+                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-adventages" id="checkbox-adventages">
+
+                  <label class="label-checklist" for="checkbox-adventages">Блок преимуществ<span class="checkbox-indicator"></span></label>
                 </li>
                 <li class="filters-item">
-                  <label>
-                    Новости
-                    <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-news" id="checkbox-news" checked>
-                    <span class="checkbox-indicator"></span>
-                  </label>
+                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-news" id="checkbox-news" checked>
+
+                  <label class="label-checklist" for="checkbox-news">Новости<span class="checkbox-indicator"></span></label>
                 </li>
                 <li class="filters-item">
-                  <label>
-                    Галерея
-                    <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-galley" id="checkbox-gallery">
-                    <span class="checkbox-indicator"></span>
-                  </label>
+                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-galley" id="checkbox-gallery">
+
+                  <label class="label-checklist" for="checkbox-gallery">Галерея<span class="checkbox-indicator"></span></label>
                 </li>
                 <li class="filters-item">
-                  <label>
-                    Корзина
-                    <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-cart" id="checkbox-cart">
-                    <span class="checkbox-indicator"></span>
-                  </label>
+                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-cart" id="checkbox-cart">
+
+                  <label class="label-checklist" for="checkbox-cart">Корзина<span class="checkbox-indicator"></span></label>
                 </li>
               </ul>
             </fieldset>
@@ -134,41 +125,41 @@
           </div>
           <ul class="gallery-content-list">
             <li class="gallery-element active">
-              <a  class="gallery-element-link" href="sedona.html"><img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona"></a>
+              <img class="gallery-element-image" src="img/img-sedona.jpg" width="360" height="576" alt="Sedona">
               <div class="gallery-element-hover">
-                <h3 class="gallery-element-hover-title">Sedona</h3>
+                <h3 class="gallery-element-hover-title"><a  class="gallery-element-link" href="sedona.html">Sedona</a></h3>
                 <p class="gallery-element-hover-description">Информационный сайт<br>для туристов</p>
                 <button  class="index-button add-to-cart" type="button">9900 руб.</button>
               </div>
             </li>
             <li class="gallery-element">
-              <a class="gallery-element-link" href="pink.html"><img src="img/img-pink.jpg" width="360" height="576" alt="Pink"></a>
+              <img class="gallery-element-image" src="img/img-pink.jpg" width="360" height="576" alt="Pink">
               <div class="gallery-element-hover">
-                <h3 class="gallery-element-hover-title">Pink-App</h3>
+                <h3 class="gallery-element-hover-title"><a class="gallery-element-link" href="pink.html">Pink-App</a></h3>
                 <p class="gallery-element-hover-description">Продуктовый лендинг<br>приложения для iOS и Android</p>
                 <button  class="index-button add-to-cart" type="button">9900 руб.</button>
               </div>
             </li>
             <li class="gallery-element">
-              <a class="gallery-element-link" href="barbershop.html"><img src="img/img-barbershop.jpg" width="360" height="576" alt="Borodinsky"></a>
+              <img class="gallery-element-image" src="img/img-barbershop.jpg" width="360" height="576" alt="Borodinsky">
               <div class="gallery-element-hover">
-                <h3 class="gallery-element-hover-title">Borodinsky</h3>
+                <h3 class="gallery-element-hover-title"><a class="gallery-element-link" href="barbershop.html">Borodinsky</a></h3>
                 <p class="gallery-element-hover-description">Сайт салоны красоты.<br>Для мужчин, да.</p>
                 <button class="index-button add-to-cart" type="button">9900 руб.</button>
               </div>
             </li>
             <li class="gallery-element">
-              <a class="gallery-element-link" href="mishka.html"><img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka"></a>
+              <img class="gallery-element-image" src="img/img-mishka.jpg" width="360" height="576" alt="Mishka">
               <div class="gallery-element-hover">
-                <h3 class="gallery-element-hover-title">Mishka</h3>
+                <h3 class="gallery-element-hover-title"><a class="gallery-element-link" href="mishka.html">Mishka</a></h3>
                 <p class="gallery-element-hover-description">Интернет-магазин<br>вязаных игрушек</p>
                 <button class="index-button add-to-cart" type="button">9900 руб.</button>
               </div>
             </li>
             <li class="gallery-element">
-              <a class="gallery-element-link" href="aplus.html"><img src="img/img-aplus.jpg" width="360" height="576" alt="A Plus"></a>
+              <img class="gallery-element-image" src="img/img-aplus.jpg" width="360" height="576" alt="A Plus">
               <div class="gallery-element-hover">
-                <h3  class="gallery-element-hover-title">A Plus</h3>
+                <h3  class="gallery-element-hover-title"><a class="gallery-element-link" href="aplus.html">A Plus</a></h3>
                 <p class="gallery-element-hover-description">Лендинг курсов повышения<br>квалификации</p>
                 <button class="index-button add-to-cart" type="button">9900 руб.</button>
               </div>
@@ -176,7 +167,7 @@
             <li class="gallery-element">
               <a class="gallery-element-link" href="kvast.html"><img src="img/img-kvast.jpg" alt="Кваст"></a>
               <div class="gallery-element-hover">
-                <h3  class="gallery-element-hover-title">Кваст</h3>
+                <h3  class="gallery-element-hover-title"><a class="gallery-element-link" href="kvast.html">Кваст</a></h3>
                 <p class="gallery-element-hover-description">Промо-сайт производителя<br>крафтового кваса</p>
                 <button type="button" class="index-button add-to-cart">9900 руб.</button>
               </div>
