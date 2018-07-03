@@ -1016,7 +1016,7 @@ transform: translate(-50%,-300px);
 /*-------------------------------catalog.html---------------------------------*/
 .header-catalog {
   padding-bottom: 98px;
-  margin-bottom: 57px;
+  margin-bottom: 55px;
 }
 
 .catalog-title {
@@ -1065,7 +1065,7 @@ transform: translate(-50%,-300px);
 }
 
 .filter-item.filter-features {
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 
 .filters legend {
@@ -1078,7 +1078,7 @@ transform: translate(-50%,-300px);
 }
 
 .filter-price legend {
-  margin-bottom: 46px;
+  margin-bottom: 48px;
 }
 
 .filter-net legend, .filter-features legend {
@@ -1120,7 +1120,7 @@ transform: translate(-50%,-300px);
   position: relative;
 
   height: 41px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
@@ -1463,6 +1463,7 @@ transform: translate(-50%,-300px);
 .gallery {
   display: flex;
   flex-direction: column;
+  padding-top: 2px;
 
   width: 760px;
 }
