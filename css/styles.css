@@ -174,7 +174,7 @@ img {
 
 .menu-item-link.active, .cart-item-link.active {
   outline: none;
-  box-shadow: 0 5px 0px -1px #eeeeee, 0 7px 0px -1px #f7898b;
+  box-shadow: 0 9px 0px -1px #eeeeee, 0 11px 0px -1px #f7898b;
 }
 
 /*-------------------------------слайдер-------------------------------------*/
