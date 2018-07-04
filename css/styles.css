@@ -1265,8 +1265,8 @@ transform: translate(-50%,-300px);
 .filter-features-checkbox:disabled + .label-checklist::after,
 .filter-features-checkbox:checked:disabled + .label-checklist::before,
 .filter-features-checkbox:checked:disabled + .label-checklist::after,
-.filter-features-checkbox:disabled + .label-checklist:hover,
-.filter-features-checkbox:checked:disabled + .label-checklist:hover  {
+.filter-features-checkbox:disabled + .label-checklist,
+.filter-features-checkbox:checked:disabled + .label-checklist {
   opacity: 0.3;
 }
 
