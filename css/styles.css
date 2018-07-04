@@ -664,10 +664,10 @@ iframe.active{
 }
 
 .map-wrapper {
-  position: relative;
+  /*position: relative;
   padding: 0 20px;
   margin: 0 auto;
-  width: 1160px;
+  width: 1160px;*/
 }
 .iframe-wrapper {
   background-repeat: no-repeat;
@@ -675,10 +675,11 @@ iframe.active{
 }
 
 .contacts {
+  /*
   position: absolute;
   z-index: 3;
   top: 54px;
-  /*left: 141px;*/
+  //left: 141px;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -686,9 +687,26 @@ iframe.active{
   width: 319px;
 
   background-color: #ffffff;
+  */
+
+    position: absolute;
+    z-index: 3;
+    top: 54px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-content: stretch; */
+    padding: 48px 49px;
+    /* width: 319px; */
+    background-color: #ffffff;
 }
 .contacts-wrapper {
 /*padding-right: 20px;*/
+  position: relative;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 1160px;
 }
 
 .contacts .index-button {
