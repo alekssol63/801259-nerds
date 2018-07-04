@@ -955,10 +955,17 @@ transform: translate(-50%,-300px);
 .message-form-input:hover {
   border-color: #b4b9bb;
 }
+
 .message-form-input:focus {
   border-color: #000000;
   color: #444444;
 }
+
+.message-form-input:required {
+  border-color: #e74246;
+  color: #e74246;
+}
+
 .message-form-input:focus::-webkit-input-placeholder {
   color: #000000;
 }

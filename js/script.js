@@ -61,8 +61,16 @@ close.addEventListener("click", function (evt) {
   saveData();
 });
 messageForm.addEventListener("submit", function (evt) {
-  console.log('here');
   if (!userName.value || !eMail.value || !letter.value) {
+    if (!userName.value) {
+      userName.setAttribute('required', '');
+    }
+    if (!eMail.value) {
+      eMail.setAttribute('required', '');
+    }
+    if (!letter.value) {
+      letter.setAttribute('required', '');
+    }
     evt.preventDefault();
     messageForm.classList.remove("modal-error");
     messageForm.offsetWidth = messageForm.offsetWidth;
