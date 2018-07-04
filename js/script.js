@@ -76,6 +76,7 @@ messageForm.addEventListener("submit", function (evt) {
     messageForm.offsetWidth = messageForm.offsetWidth;
     messageForm.classList.add("modal-error");
   } else {
+      
       saveData();
   }
 });

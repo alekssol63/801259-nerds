@@ -670,6 +670,7 @@ iframe.active{
   width: 1160px;*/
 }
 .iframe-wrapper {
+  background-position: 50%;
   background-repeat: no-repeat;
   background-image: url(../img/map.png);
 }
