@@ -668,11 +668,14 @@ iframe.active{
   padding: 0 20px;
   margin: 0 auto;
   width: 1160px;*/
-}
-.iframe-wrapper {
   background-position: 50%;
   background-repeat: no-repeat;
   background-image: url(../img/map.png);
+}
+.iframe-wrapper {
+/*  background-position: 50%;
+  background-repeat: no-repeat;
+  background-image: url(../img/map.png);*/
 }
 
 .contacts {
