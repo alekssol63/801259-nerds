@@ -5,7 +5,7 @@
     <title>Нёрдс: каталог</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="header-catalog">
@@ -78,26 +78,26 @@
               <legend>Особенности</legend>
               <ul class="filters-list">
                 <li class="filters-item">
-                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-slider" id="checkbox-slider" checked>
+                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="input-checkbox" value="slider" id="checkbox-slider" checked>
                   <label class="label-checklist" for="checkbox-slider">Слайдер</label>
                 </li>
                 <li class="filters-item">
-                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-adventages" id="checkbox-adventages">
+                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="input-checkbox" value="adventages" id="checkbox-adventages">
 
                   <label class="label-checklist" for="checkbox-adventages">Блок преимуществ</label>
                 </li>
                 <li class="filters-item">
-                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-news" id="checkbox-news" checked>
+                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="input-checkbox" value="news" id="checkbox-news" checked>
 
                   <label class="label-checklist" for="checkbox-news">Новости</label>
                 </li>
                 <li class="filters-item">
-                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-galley" id="checkbox-gallery">
+                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="input-checkbox" value="gallery" id="checkbox-gallery">
 
                   <label class="label-checklist" for="checkbox-gallery">Галерея</label>
                 </li>
                 <li class="filters-item">
-                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="check-cart" id="checkbox-cart">
+                  <input class="visually-hidden filter-features-checkbox" type="checkbox" name="input-checkbox" value="cart" id="checkbox-cart">
 
                   <label class="label-checklist" for="checkbox-cart">Корзина</label>
                 </li>
@@ -198,7 +198,7 @@
               <a href="#" class="index-button red-link write-us">Напишите нам</a>
             </div>
         </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="1440" height="420" allowfullscreen></iframe>          
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="1440" height="420" allowfullscreen></iframe>
       </div>
       <div class="footer-bottom-wrapper">
         <div class="footer-social">
@@ -253,11 +253,11 @@
         <div class="message-form-wrapper">
         <p class="message-form-label">
           <label for="user-name">Ваше имя:</label>
-          <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия" value="" class="message-form-input">
+          <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия" value="" class="message-form-input" required>
         </p>
         <p class="message-form-label">
           <label for="user-mail">Ваш e-mail:</label>
-          <input type="text" id="user-mail" name="e-mail" placeholder="e-mail@example.com" value="" class="message-form-input">
+          <input type="text" id="user-mail" name="e-mail" placeholder="e-mail@example.com" value="" class="message-form-input" required>
         </p>
         <p class="message-form-label">
           <label for="user-message">Текст письма:</label>
@@ -267,6 +267,6 @@
         <input type="submit" name="transmit" value="Отправить" class="index-button red-link">
       </form>
     </section>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.min.js"></script>
   </body>
 </html>
