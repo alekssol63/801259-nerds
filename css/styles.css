@@ -597,15 +597,22 @@ main {
   align-items: center;
   width: 21%;
 }
-.works-list-item:nth-child(-n+3):after {
-  content: "";
-  width: 2px;
-  height: 51px;
-  position: absolute;
-  right: -18px;
-  top: 17px;
 
-  background-color: #f4f4f4;
+.works-list-item::after {
+content: "";
+width: 2px;
+height: 51px;
+position: absolute;
+right: -18px;
+top: 17px;
+
+background-color: #f4f4f4;
+}
+
+.works-list-item:nth-child(4n):after {
+width: 0;
+height: 0;
+background-color: none;
 }
 
 .works-list-logo {
@@ -642,6 +649,7 @@ iframe {
   background-position: 50%;
   background-repeat: no-repeat;
   background-image: url(../img/map.png);
+  background-color: gray;
 }
 
 
