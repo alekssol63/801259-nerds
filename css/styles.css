@@ -172,7 +172,8 @@ img {
 
 .menu-item-link.active, .cart-item-link.active {
   outline: none;
-  box-shadow: 0 9px 0px -1px #eeeeee, 0 11px 0px -1px #f7898b;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f7898b;
 }
 
 /*-------------------------------слайдер-------------------------------------*/
@@ -650,6 +651,7 @@ iframe {
   background-repeat: no-repeat;
   background-image: url(../img/map.png);
   background-color: gray;
+  height: 416px;
 }
 
 
