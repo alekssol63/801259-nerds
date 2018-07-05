@@ -346,8 +346,8 @@ main {
 
 /*-----------------------------adventages------------------------------------*/
 .adventages {
-  margin-bottom: 38px;
-  padding-bottom: 80px;
+  margin-bottom: 39px;
+  padding-bottom: 69px;
   border-bottom: 2px solid #f4f4f4;
 }
 
@@ -373,7 +373,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: red url(../img/illustration-1.png);
+  background: red url(../img/illustration-1.png);
   width: 300px;
   height: 146px;
 }
@@ -382,7 +382,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: springgreen url(../img/illustration-2.png);
+  background: springgreen url(../img/illustration-2.png);
   width: 300px;
   height: 146px;
 }
@@ -391,11 +391,13 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: gold url(../img/illustration-3.png);
+  background: gold url(../img/illustration-3.png);
   width: 300px;
   height: 146px;
 }
-
+.adventages-item {
+  padding-bottom: 10px;
+}
 .adventages-item.site {
   position: relative;
 }
@@ -580,7 +582,7 @@ main {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0;
-  padding: 50px 25px 39px 26px;
+  padding: 50px 0px 39px 25px;
   list-style: none;
 
   border-top: 2px solid #f4f4f4;
@@ -591,15 +593,16 @@ main {
 .works-list-item {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  width: 21%;
 }
 .works-list-item:nth-child(-n+3):after {
   content: "";
   width: 2px;
   height: 51px;
   position: absolute;
-  right: -46px;
+  right: -18px;
   top: 17px;
 
   background-color: #f4f4f4;
