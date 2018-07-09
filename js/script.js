@@ -1,14 +1,10 @@
 var writeButton = document.querySelector(".write-us");
-
 var messageForm = document.querySelector(".message-form");
-
 var close = messageForm.querySelector(".modal-close");
-
 var userName = messageForm.querySelector("[name=user-name]");
 var eMail = messageForm.querySelector("[name=e-mail]");
 var letter = messageForm.querySelector("[name=letter]");
 var isStorageSupport = true;
-
 var storageUserName = "";
 var storageEmail  = "";
 var storageLetter = "";
@@ -20,6 +16,7 @@ function saveData() {
     localStorage.setItem("letter", letter.value);
   }
 }
+
 try {
   storageUserName = localStorage.getItem("userName");
   if (userName.hasAttribute('required')) {
@@ -43,18 +40,15 @@ writeButton.addEventListener("click", function (evt) {
   } else {
     userName.focus();
   }
-
   if (storageEmail) {
     eMail.value = storageEmail;
     letter.focus();
   } else {
     eMail.focus();
   }
-
   if (storageLetter) {
     letter.value = storageLetter;
   }
-
 });
 
 close.addEventListener("click", function (evt) {
@@ -74,6 +68,7 @@ messageForm.addEventListener("submit", function (evt) {
     saveData();
   }
 });
+
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
