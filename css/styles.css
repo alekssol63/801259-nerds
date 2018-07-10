@@ -1452,11 +1452,13 @@ iframe {
   opacity: 0.4;
 }
 
-.label-checklist:hover::before {
+.label-checklist:hover::before,
+.filter-features-checkbox:focus + .label-checklist::before {
   opacity: 1;
 }
 
-.filter-features-checkbox:checked + .label-checklist:hover::after {
+.filter-features-checkbox:checked + .label-checklist:hover::after,
+.filter-features-checkbox:checked:focus + .label-checklist::after {
   opacity: 0.7;
 }
 
@@ -1515,7 +1517,9 @@ iframe {
 
 .filter-net-radio:checked + .label-radio:hover::after,
 .label-radio:hover::before,
-.label-radio:hover {
+.label-radio:hover,
+.filter-net-radio:checked:focus + .label-radio::after,
+.filter-net-radio:checked:focus + .label-radio::before {
   border-color: #4d4d4d;
   color: #000000;
   outline: none;
@@ -1739,7 +1743,7 @@ iframe {
   line-height: 18px;
 
   color: #666666;
-  white-space: pre-line; 
+  white-space: pre-line;
 }
 
 .gallery-sort-list-item a:hover,
