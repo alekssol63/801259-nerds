@@ -1739,6 +1739,7 @@ iframe {
   line-height: 18px;
 
   color: #666666;
+  white-space: pre-line; 
 }
 
 .gallery-sort-list-item a:hover,
