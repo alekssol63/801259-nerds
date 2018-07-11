@@ -84,9 +84,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
@@ -100,6 +100,7 @@ img {
 
 .logo-img {
   width: 160px;
+  margin-right: 199px;
 }
 
 .logo-img:hover {
