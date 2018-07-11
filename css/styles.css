@@ -1694,7 +1694,7 @@ iframe {
   padding-left: 60px;
   padding-right: 60px;
 
-  width: 360px;
+  width: 358px;
 
   background-color: #eeeeee;
   text-align: center;
@@ -1799,6 +1799,7 @@ li.gallery-element:nth-child(6n) {
 .gallery-element:hover {
   -webkit-box-shadow: 2px 3px 15px 3px #cfcfcf;
   box-shadow: 2px 3px 15px 3px #cfcfcf;
+  border: none;
 }
 
 .gallery-content-list {
@@ -1834,18 +1835,22 @@ li.gallery-element:nth-child(6n) {
 }
 
 .gallery-element::before {
-  content: url(../img/browser-header.svg);
+  content: "";
   position: absolute;
   left: -1px;
   top: -40px;
-
+  height: 40px;
   width: 360px;
 
   opacity: 0.12;
+  background: gray url(../img/browser-header.svg);
 }
 
 .gallery-element:hover::before {
-  content: url(../img/browser-header.svg);
+  left: 0;
+  height: 40px;
+  width: 358px;
+
   opacity: 1;
 }
 
