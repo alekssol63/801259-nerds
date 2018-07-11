@@ -1799,7 +1799,6 @@ li.gallery-element:nth-child(6n) {
 .gallery-element:hover {
   -webkit-box-shadow: 2px 3px 15px 3px #cfcfcf;
   box-shadow: 2px 3px 15px 3px #cfcfcf;
-  border: none;
 }
 
 .gallery-content-list {
